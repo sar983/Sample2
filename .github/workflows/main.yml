@@ -1,0 +1,19 @@
+name: Simple GitHub Actions Workflow
+
+on: [push, pull_request]  # Trigger on any push or pull request event
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest  # Specifies the runner (operating system)
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3  # Checks out the repository code
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'  # Installs Python 3.9
+
+      - name: Run Script
+        run: python app.py  # Runs the Python script
