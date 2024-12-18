@@ -16,4 +16,4 @@ jobs:
           python-version: '3.9'  # Installs Python 3.9
 
       - name: Run Script
-        run: python greeting.py  # Runs the Python script
+        run: python sample.py  # Runs the Python script
